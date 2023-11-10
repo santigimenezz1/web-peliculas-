@@ -2,8 +2,12 @@
 
     "rewrites":  [
       {"source": "/(.*)", "destination": "/"}
-   ]
+   ],
       
-
+    "build": {
+      "env": {
+        "CI": "true"
+      }
+    }
   }
   
