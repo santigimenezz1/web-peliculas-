@@ -1,0 +1,14 @@
+{
+    "build": {
+      "env": {
+        "IGNORE_BUILD_ERRORS": "1"
+      },
+      "cmd": "npm run custom-build-script"
+    },
+    "functions": {
+      "api/**/*.js": {
+        "runtime": "nodejs14.x",
+        "memory": 1024
+      }
+    }
+  }

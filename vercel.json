@@ -1,0 +1,22 @@
+{
+    "version": 2,
+    "builds": [
+      {
+        "src": "package.json",
+        "use": "@vercel/node"
+      },
+      {
+        "src": ".next/**/*",
+        "use": "@vercel/static"
+      }
+    ],
+    "rewrites": [
+      { "source": "/(.*)", "destination": "/index.html" }
+    ],
+    "build": {
+      "env": {
+        "CI": "true"
+      }
+    }
+  }
+  
