@@ -10,5 +10,8 @@
         "runtime": "nodejs14.x",
         "memory": 1024
       }
-    }
+    },
+    
+    "rewrites":[{"source": "/(.*)", "destination": "/" }]
+
   }
