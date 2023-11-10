@@ -13,13 +13,9 @@
     
 
     "rewrites":  [
-      {"source": "/(@/*)", "destination": "/"}
+      {"source": "/(./*)", "destination": "/"}
    ],
       
-    "build": {
-      "env": {
-        "CI": "true"
-      }
-    }
+   
   }
   
