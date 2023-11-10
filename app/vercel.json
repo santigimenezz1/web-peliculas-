@@ -1,17 +1,18 @@
 {
-    "build": {
-      "env": {
-        "IGNORE_BUILD_ERRORS": "1"
-      },
-      "cmd": "npm run custom-build-script"
+  "build": {
+    "env": {
+      "IGNORE_BUILD_ERRORS": "1"
     },
-    "functions": {
-      "api/**/*.js": {
-        "runtime": "nodejs14.x",
-        "memory": 1024
-      }
-    },
-    
-    "rewrites":[{"source": "/(.*)", "destination": "/" }]
-
-  }
+    "cmd": "npm run custom-build-script"
+  },
+  "functions": {
+    "api/**/*.js": {
+      "runtime": "nodejs14.x",
+      "memory": 1024
+    }
+  },
+  "rewrites": [
+    { "source": "/api/(.*)", "destination": "/api/$1" },
+    { "source": "/(.*)", "destination": "/" }
+  ]
+}
